@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==3.2"
+django-allauth = "==0.45.0"
+django-taggit = "*"
+djangorestframework = "*"
+django-filter = "*"
+Pillow = "*"
+autopep8 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

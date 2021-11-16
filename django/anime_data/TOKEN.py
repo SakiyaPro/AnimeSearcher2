@@ -1,0 +1,2 @@
+# AnnictAPI接続時に使用
+TOKEN ='ddFGRn8UPCE7YMjHfLB08dp4mdMKrt82HLwWJbWBOko'

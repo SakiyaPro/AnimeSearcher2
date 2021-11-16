@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+    django:
+        container_name: django
+
+        build: ./django
+
+        command: python manage.py runserver 0.0.0.0:8000
+
+        volumes:
+            - ./django:/usr/src/django
+
+        environment:
+            # 1ならデバックモード
+            - DEBUG=1
+            # setting.pyに記載されているSECRET_KEYを記入
+            - SECRET_KEY=hoge
+
+        ports:
+            - 8080:8000
