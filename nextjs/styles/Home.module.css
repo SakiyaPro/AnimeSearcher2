@@ -1,0 +1,43 @@
+.flexItem {
+  display: flex;
+}
+
+.content {
+  margin-bottom: 40px;
+}
+
+.content .item {
+  /* border-right: 1px solid #aaa; */
+}
+
+.wrapper {
+  background-color: #aaa;
+  width: 60%;
+  margin: 0 auto;
+  padding: 3%;
+  min-height: 100vh;
+}
+
+.secTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #DE8971;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+
+/* =============================
+スクロール
+===============================*/
+.horizontalList {
+  overflow-x: auto;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.horizontalList .item {
+  /* 横スクロール用 */
+  display: inline-block;
+  margin: 10px;
+}

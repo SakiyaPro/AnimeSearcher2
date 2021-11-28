@@ -1,0 +1,16 @@
+{
+	"name": "container nextjs",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"../.devcontainer/docker-compose.yml"
+	],
+	"extensions":[
+		"sibiraj-s.vscode-scss-formatter",
+		"dbaeumer.vscode-eslint",
+		"dsznajder.es7-react-js-snippets",
+		"oderwat.indent-rainbow"
+	],
+	"service": "nextjs",
+	"workspaceFolder": "/workspace/nextjs",
+	"shutdownAction": "none"
+}

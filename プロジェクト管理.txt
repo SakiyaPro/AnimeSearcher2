@@ -1,0 +1,14 @@
+↓プロジェクト管理については、Googleスプレッドシートまとめている↓
+
+【要件定義】
+システムに盛り込む機能などをまとめたもの。本プロジェクトの大筋。
+https://docs.google.com/document/d/1zk3HlUYLLMZfIPTSOBIL25GG6rOLTKjy9McTkc0eIf0/edit?usp=sharing
+
+
+【外部設計】
+ユーザーインターフェースを大まかに設計したもの。
+（リンク）
+
+【内部設計】
+外部設計に基づき、必要となるプログラムを設計したもの。
+（リンク）

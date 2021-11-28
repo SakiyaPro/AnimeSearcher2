@@ -1,6 +1,19 @@
 version: '3.7'
 
 services:
+    nextjs:
+        container_name: nextjs
+
+        build: ./nextjs
+
+        command: npm run dev
+
+        volumes:
+            - ./nextjs:/usr/src/nextjs
+
+        ports:
+            - 3000:3000
+
     django:
         container_name: django
 
@@ -18,4 +31,4 @@ services:
             - SECRET_KEY=hoge
 
         ports:
-            - 8080:8000
+            - 8000:8000
