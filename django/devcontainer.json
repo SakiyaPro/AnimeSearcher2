@@ -1,0 +1,16 @@
+{
+	"name": "container django",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"../.devcontainer/docker-compose.yml"
+	],
+	"extensions":[
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"thebarkman.vscode-djaneiro",
+		"oderwat.indent-rainbow"
+	],
+	"service": "django",
+	"workspaceFolder": "/workspace/django",
+	"shutdownAction": "none"
+}
