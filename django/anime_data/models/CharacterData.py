@@ -3,6 +3,7 @@ from django.db.models.fields import IntegerField, TextField
 
 from core_models.models import TimeStampedModel
 from .models_validations.models_validations import *
+from anime_data.models.AnimeSeriesData import AnimeSeriesData
 
 
 class CharacterData(TimeStampedModel):
@@ -18,7 +19,7 @@ class CharacterData(TimeStampedModel):
     birthday = TextField("誕生日", null=True, blank=True)
     birthdayEn = TextField("誕生日EN", null=True, blank=True)
     bloodType = TextField("血液型", null=True, blank=True)
-    birthdayEn = TextField("血液型EN", null=True, blank=True)
+    bloodTypeEn = TextField("血液型EN", null=True, blank=True)
     height = TextField("誕生日", null=True, blank=True)
     heightEn = TextField("誕生日", null=True, blank=True)
     weight = TextField("誕生日", null=True, blank=True)
@@ -33,8 +34,6 @@ class CharacterData(TimeStampedModel):
     descriptionSourceEn = TextField("キャラ紹介ソースEN", null=True, blank=True)
     favoriteCharactersCount = IntegerField(
         "Annictユーザーお気に入り数", null=True, blank=True)
-    series = TextField("アニメシリーズ", validators=[
-                       validation_dict], null=True, blank=True)
     # --------------------------------------------------------------------------
 
     class Meta:

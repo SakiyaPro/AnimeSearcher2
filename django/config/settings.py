@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure--w@!)fvdh72o8-wuwpa_(c00g(ew4t-t*#ghk+uwn^n%0fhce6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -45,22 +46,28 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     # Custom User
-     'users.apps.UsersConfig',
+    'users.apps.UsersConfig',
 
-     # タグ機能(django-taggit)
-     'taggit',
+    # タグ機能(django-taggit)
+    'taggit',
 
-     # RestAPI 作成
+    # RestAPI 作成
     'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
     'django_filters',
 
+    # cors
+    'corsheaders',
 
-     # apps
-     'anime_data',
+    # apps
+    'anime_data',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Django CORS Headers
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -68,6 +75,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'config.urls'
 
@@ -100,10 +109,23 @@ DATABASES = {
     }
 }
 
+SIMPLE_JWT = {
+    #トークンをJWTに設定
+    'AUTH_HEADER_TYPES': ('JWT'),
+    #トークンの持続時間の設定
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60)
+}
+
+REST_USE_JWT = True
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
 }
 
 
@@ -127,12 +149,18 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Custom User
 AUTH_USER_MODEL = 'users.CustomUser'
-ACCOUNT_FORMS   = { "signup":"users.forms.SignupForm"}
+ACCOUNT_FORMS = {"signup": "users.forms.SignupForm"}
 # CustomUser's SITE_ID
 SITE_ID = 1
+# メールアドレス認証に変更する設定
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+# メールアドレスを要求する
+ACCOUNT_EMAIL_REQUIRED = True
+# サインナップ、ログイン時のユーザーネーム認証をキャンセル
+ACCOUNT_USERNAME_REQUIRED = False
+
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
-
 
 
 # Internationalization

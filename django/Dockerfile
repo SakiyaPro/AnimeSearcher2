@@ -20,6 +20,7 @@ RUN pip install --upgrade setuptools pip \
 COPY ./Pipfile /usr/src/django/Pipfile
 
 # pipfileからパッケージをインストールしてDjango環境を構築
+RUN pipenv install django==3.2
 RUN pipenv install --skip-lock --system --dev
 
 # ホストのカレントディレクトリ（現在はappディレクトリ）を作業ディレクトリにコピー

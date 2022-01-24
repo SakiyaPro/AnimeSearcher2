@@ -1,0 +1,84 @@
+/* ===============================
+wrapper & flex */
+.outerWrapper {
+    width: 100vw;
+    text-align: center;
+}
+
+.innerWrapper {
+    display: inline-block;
+    width: 1000px;
+    height: 840px;
+    font-size: 1.4rem;
+    text-align: left;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #1b1b1b;
+    padding: 3%;
+}
+
+.innerWrapper .user_icon {
+    border: 2px solid #aaa;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 55px;
+}
+
+.intro {
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 0.1rem solid #aaa;
+}
+
+.contentWrapper {}
+
+.articleTitleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.articleTitleWrapper li {
+    padding: 10px 40px;
+    color: #616161;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    filter: drop-shadow(1px 1px 3px #000);
+}
+
+.articleTitleWrapper li:first-child {
+    color: #ffeb3b;
+    border-right: 1px solid #aaa;
+}
+
+/* =================================
+中身 */
+
+.content {
+    margin-top: 30px;
+}
+
+.username {
+    margin-top: 10px;
+}
+
+.selfIntro {
+    width: 500px;
+    height: 130px;
+    border-radius: 10px;
+    border: 2px solid #aaa;
+    margin-top: 20px;
+}
+
+/* ================================
+react-moveable 設定項目
+(画像をサイト上で自由に操作できるツール)*/
+/* .moveable {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 50px;
+    display: inline-block;
+    position: absolute;
+}
+ */

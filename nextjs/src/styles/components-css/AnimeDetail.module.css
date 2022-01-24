@@ -1,0 +1,64 @@
+/* ========================================
+ラッパー */
+
+.listWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.baseFont {
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
+/* ========================================
+アニメの詳細情報表示 */
+
+.thumbnailWrapper {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.animeDetail {
+    transition: .2s;
+    border: 1px solid #fff;
+}
+
+.animeDetail .thumbnail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.animeDetail .thumbnail::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 -15px 10px 0 #181a1b;
+}
+
+.animeDetail:hover {
+    transform: scale(1.1);
+    transform-origin: bottom;
+    border: 1px solid #E50914;
+}
+
+
+
+.textDetail {
+    color: #fff;
+    background-color: #181a1b;
+    transition: .1s;
+}
+
+
+/* ================================================
+ボタン */

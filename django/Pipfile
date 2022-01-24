@@ -4,11 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==3.2"
-django-allauth = "==0.45.0"
 django-taggit = "*"
-djangorestframework = "*"
+django-allauth = "==0.45.0"
+djangorestframework = "==3.12.1"
 django-filter = "*"
+django-cors-headers = "*"
+djangorestframework-simplejwt = "==4.8.0"
+dj-rest-auth = "==2.1.2"
+
 Pillow = "*"
 autopep8 = "*"
 

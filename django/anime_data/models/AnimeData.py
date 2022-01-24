@@ -1,10 +1,16 @@
 from core_models.models import TimeStampedModel
 from django.db import models
 from django.db.models.fields import IntegerField, TextField, PositiveIntegerField
-from django.db.models.fields.files import ImageField, FileField
+from django.db.models.fields.files import ImageField
+
 from taggit.managers import TaggableManager
 
 from .models_validations.models_validations import *
+from anime_data.models.AnimeSeriesData import AnimeSeriesData
+from anime_data.models.CastsData import CastsData
+from anime_data.models.EpisodesData import EpisodesData
+from anime_data.models.StaffsData import StaffsData
+
 
 
 class AnimeData(TimeStampedModel):
@@ -14,17 +20,13 @@ class AnimeData(TimeStampedModel):
     titleEn = TextField("タイトルEN", null=True, blank=True)
     titleKana = TextField("タイトルかな", null=True, blank=True)
     titleRo = TextField("タイトルRO", null=True, blank=True)
-    casts = TextField("キャスト・声優", validators=[
-                      validation_list_and_dict], null=True, blank=True)  # キャスト
-    staffs = TextField("スタッフ・制作会社", validators=[
-                       validation_list_and_dict], null=True, blank=True)  # 制作会社
-    episodes = TextField("各エピソード詳細", validators=[
-                         validation_list_and_dict], null=True, blank=True)  # エピソード詳細
+    casts = models.ManyToManyField(CastsData)  #声優陣
+    staffs = models.ManyToManyField(StaffsData)  # 制作スタッフ
+    episodes = models.ManyToManyField(EpisodesData)  # エピソード詳細
     episodesCount = IntegerField("総エピソード数", null=True, blank=True)
     seasonName = TextField("放送季節", null=True, blank=True)
     seasonYear = TextField("放送年", null=True, blank=True)
-    seriesList = TextField("アニメシリーズ", validators=[
-                           validation_dict], null=True, blank=True)  # シリーズ名
+    seriesList = models.ManyToManyField(AnimeSeriesData)  # シリーズ名
     watchersCount = IntegerField(
         "Annict視聴者数", null=True, blank=True)  # GoodRate出来上がるまでの指標
     # ------------MyAPI---------------------------------------------------------

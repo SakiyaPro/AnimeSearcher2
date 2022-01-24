@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.listWrapper {
+    width: 400px;
+}
+
+.listWrapperItems {
+    margin-bottom: 5px;
+}
+
+.baseFont {
+    font-size: small;
+}
