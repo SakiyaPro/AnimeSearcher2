@@ -1,34 +1,33 @@
 /* ============================================
 サイトロゴ */
 .siteLogo {
-    margin-left: 100px;
-    width: 100vw;
-    padding: 10px 0px 8px 30px;
+    margin-left: 10px;
+    padding: 10px 0px 8px 0px;
     padding-bottom: 17px;
-    filter: drop-shadow(0px 0px 5px #000);
+    position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 /* ============================================
 フレックス */
 
 .flexItems {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "M PLUS 1p";
-    padding-bottom: 20px;
-    margin-bottom: 50px;
-    margin-top: 20px;
-    margin-left: 170px;
+    margin-top: 15px;
     position: fixed;
     top: 0;
     right: 0;
 }
 
 .flexItems .item {
-    margin-left: 10px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
     opacity: 0.8;
@@ -61,23 +60,19 @@
 /* ===========================================
 ヘッダーコンテンツ */
 .headerContents {
+    display: flex;
     text-align: center;
+    width: 400px;
     display: flex;
     position: fixed;
     z-index: 10;
     right: 0;
-    margin-right: 2px;
 }
 
 .headerContents li {
     color: #fff;
-    width: 130px;
-    border-left: 2px solid #cfcfcf;
-    padding: 17px 22px 17px 20px;
-}
-
-.headerContents li:nth-last-child(1) {
-    border-right: 2px solid #cfcfcf;
+    width: 100px;
+    margin-top: 20px;
 }
 
 .headerContents a {

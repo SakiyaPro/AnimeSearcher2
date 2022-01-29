@@ -1,0 +1,51 @@
+/* ===============================================
+sideViewAnime */
+
+.asideContent {
+    height: 87vh;
+    overflow-y: scroll;
+    overflow-x: visible;
+    font-size: 0.75rem;
+    margin-top: 20px;
+}
+
+.asideContent::-webkit-scrollbar-track {
+    background: #aaa;
+    background: rgba(0, 0, 0, 0);
+}
+
+.asideContent::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+}
+
+
+.sideViewAnime {
+    display: flex;
+    width: 400px;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 100%, 0.08);
+
+    margin-bottom: 3px;
+}
+
+.sideViewAnimeDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+
+/* =================================================
+スクロール*/
+
+.horizontalList {
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+.horizontalList .item {
+    /* 横スクロール用 */
+    display: inline-block;
+    margin: 10px;
+}

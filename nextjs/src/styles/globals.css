@@ -2,19 +2,21 @@ html,
 body {
   width: 100%;
   color: #fff;
-  background-color: #000;
+  background-color: #aaa;
   font-size: 17px;
   font-family: 'Outfit', 'Noto Sans JP', 'Murecho', sans-serif;
-  margin-top: 55px;
 }
 
 header {
-  background-color: #000;
-  border-bottom: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 70px;
+  background-color: hsla(0, 0%, 7%, 0);
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 
 
@@ -43,7 +45,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3D0000;
+  background: #aaa;
   scrollbar-width: thin;
   width: 50px;
   border-radius: 5px;

@@ -7,9 +7,9 @@ export default function Layout(props) {
     return (
         <div>
             <header>
-                <h1 className={`${styles.siteLogo}`}>
-                    <Logo width="140px" height="auto" />
-                </h1>
+                {/* <h1 className={`${styles.siteLogo}`}>
+                    <Logo width="110px" height="auto" />
+                </h1> */}
                 <ul className={`${styles.flexItems}`}>
                     <li>
                         <form method="get" action="#" className={`${styles.searchForm}`}>
@@ -22,7 +22,7 @@ export default function Layout(props) {
                             <Link href="/">
                                 <a className={`${styles.item}`}>
                                     <img src="/image/systemIcon/home.png" width="30px" />
-                                    Home
+                                    <p>Home</p>
                                 </a>
                             </Link>
                         </li>
@@ -30,7 +30,7 @@ export default function Layout(props) {
                             <Link href="/">
                                 <a className={`${styles.item}`}>
                                     <img src="/image/systemIcon/news_icon.png" width="30px" />
-                                    News
+                                    <p>News</p>
                                 </a>
                             </Link>
                         </li>
@@ -38,7 +38,7 @@ export default function Layout(props) {
                             <Link href="/">
                                 <a className={`${styles.item}`}>
                                     <img src="/image/systemIcon/ranking_icon.png" width="30px" />
-                                    Ranking
+                                    <p>Ranking</p>
                                 </a>
                             </Link>
                         </li>
@@ -46,7 +46,7 @@ export default function Layout(props) {
                             <Link href="/">
                                 <a className={`${styles.item}`}>
                                     <img src="/image/systemIcon/review_icon.png" width="30px" />
-                                    Review
+                                    <p>Review</p>
                                 </a>
                             </Link>
                         </li>
@@ -54,7 +54,7 @@ export default function Layout(props) {
                             <Link href="/account/private">
                                 <a className={`${styles.item}`}>
                                     <img src="/image/systemIcon/login_icon.png" width="30px" />
-                                    Login
+                                    <p>Login</p>
                                 </a>
                             </Link>
                         </li>
