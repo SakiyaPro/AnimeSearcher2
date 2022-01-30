@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { getAllAnimeData, getWatchersCountData } from "../lib/anime_data";
 import styles from "../styles/Home.module.css";
 import { Logo } from "../components/item/Logo";
-
+import { useState, useEffect, useGlobal, useRef } from 'reactn';
 import axios from 'axios'
 
 export default function Home() {
