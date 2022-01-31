@@ -1,23 +1,23 @@
 import fetch from "node-fetch";
+import axios from 'axios';
 
 
 // Django APIサーバーURL
-const SERVERURL = "http://192.168.0.13:8000/";
+const SERVERURL = "http://host.docker.internal:8000/";
 
 // 全アニメデータを取得
 export async function getAllAnimeData() {
-    const QUERY = "?format=json&limit=60&offset=60"
+    const QUERY = await "?format=json&limit=60&offset=60"
     const res = await fetch(new URL(`${SERVERURL}api/animedata/${QUERY}`));
-    const animes = (await res.json()).results;
+    const animes = await res.json()
     return animes;
 }
 
 // 視聴者数でソート gte => 〇〇以上
 export async function getWatchersCountData(watchersCount) {
     const QUERY = `?format=json&limit=68&watchersCount_gte=${watchersCount}`
-    const res = await fetch(new URL(`${SERVERURL}api/animedata/${QUERY}`));
-    const animes = (await res.json()).results;
-    return animes;
+    const res = await (await axios.get(`${SERVERURL}api/animedata/?format=json&limit=68&watchersCount_gte=${QUERY}`)).data.results;
+    return res;
 }
 
 // 今シーズンのアニメをソート

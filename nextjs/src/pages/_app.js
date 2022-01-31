@@ -14,13 +14,15 @@ export default function MyApp({ Component, pageProps }) {
     animeData: false
   }
   setGlobal(state)
+
+
   return (
     <>
       <Head>
         <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@600&family=Noto+Sans+JP&family=Outfit&display=swap" rel="stylesheet" />
       </Head>
-      {router.pathname === "/anime/search" ?
+      {router.pathname === "/" ?
         <Component {...pageProps} />
         :
         <Layout>

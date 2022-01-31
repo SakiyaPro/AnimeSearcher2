@@ -1,0 +1,74 @@
+/* ============================================
+Recommend Contents */
+.recommendContents {
+}
+
+/* ==============================================
+Recommend Sort */
+.recommendSort {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 125px;
+    right: 30px;
+    z-index: 10;
+    text-align: right;
+}
+
+.recommendSort p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.scrollItems {
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollItems li {
+    margin-top: 20px;
+}
+
+/* ===============================================
+Recommend Content */
+
+.recommendContent {
+    padding-top: 110px;
+}
+
+.recommendContentTitle {
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.viewAnimeWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 88%;
+}
+
+.viewAnimeGround {
+    background-color: hsla(0, 0%, 100%, 0.08);
+    padding: 3px;
+}
+
+.viewAnime {
+    display: flex;
+    flex-direction: column;
+    width: 195px;
+    margin: 10px;
+}
+
+.viewAnime img {
+    filter: brightness(103%);
+}
+
+.viewAnime h3 {
+    font-size: 0.7rem;
+}
+
+.viewAnime p {
+    margin-top: 4px;
+    font-size: 0.65rem;
+}

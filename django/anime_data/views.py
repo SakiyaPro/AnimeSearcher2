@@ -72,7 +72,7 @@ class AnimeDataFilter(filters.FilterSet):
 
 
 class AnimeDataViewSet(viewsets.ModelViewSet):
-    queryset = AnimeData.objects.order_by('annictId').all()
+    queryset = AnimeData.objects.order_by('?').all()
     serializer_class = AnimeDataSerializer
     filter_class = AnimeDataFilter
 
