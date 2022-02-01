@@ -1,10 +1,11 @@
 html,
 body {
-  width: 100%;
   color: #fff;
   background-color: #000;
   font-size: 17px;
   font-family: 'Outfit', 'Noto Sans JP', 'Murecho', sans-serif;
+  margin-left: 2%;
+  margin-right: 4%;
 }
 
 header {

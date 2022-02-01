@@ -53,6 +53,8 @@ class AnimeDataFilter(filters.FilterSet):
     seriesList = filters.CharFilter(
         field_name="seriesList", lookup_expr='contains')  # 部分一致
     # filter => watchersCount
+    watchersCount_lte = filters.NumberFilter(
+        field_name="watchersCount", lookup_expr='lte')  # ◯◯以下
     watchersCount_gte = filters.NumberFilter(
         field_name="watchersCount", lookup_expr='gte')  # ◯◯以上
     # filter => good & badCount
