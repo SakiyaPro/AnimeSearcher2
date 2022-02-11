@@ -1,23 +1,3 @@
-import React from 'react';
-
-export default function ProfileFavoriteAnime(favorite_anime) {
-    return (
-        <>
-            {
-                favorite_anime.map((anime) => {
-                    return (
-                        <ul className={`${styles.animeDetail}`} height="162px">
-                            <li key={anime.annictId} className={`${styles.thumbnail}`} >
-                                <Thumbnail src={`${anime.image}`} width="288px" height="162px" alt={animesSortByWatchers.title} />
-                            </li>
-                            <ul className={`${styles.textDetail}`}>
-                                <li className={`${styles.title}`}>{animesSortByWatchers.title}</li>
-                                <li>評価分布</li>
-                            </ul>
-                        </ul>
-                    );
-                })
-            }
-        </>
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cad8c22cdea0a452356e1ee60ceb8ef8f6c2a5d847c5ec4c42457f86625cbaba
+size 903

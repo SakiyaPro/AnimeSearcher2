@@ -1,16 +1,3 @@
-{
-	"name": "container nextjs",
-	"dockerComposeFile": [
-		"../docker-compose.yml",
-		"../.devcontainer/docker-compose.yml"
-	],
-	"extensions":[
-		"sibiraj-s.vscode-scss-formatter",
-		"dbaeumer.vscode-eslint",
-		"dsznajder.es7-react-js-snippets",
-		"oderwat.indent-rainbow"
-	],
-	"service": "nextjs",
-	"workspaceFolder": "/workspace/nextjs",
-	"shutdownAction": "none"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:514e26a7cefef1db6e00d815f1e3fe45d281e12c3487d57d6150345e2b40b779
+size 366

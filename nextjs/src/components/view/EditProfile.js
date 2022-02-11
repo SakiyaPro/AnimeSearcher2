@@ -1,27 +1,3 @@
-import React from 'react';
-
-export default function EditProfile() {
-    return (
-        <>
-            <React.Fragment>
-                <img id="user_icon" className={`${styles.moveable}`} src={user_icon} />
-                <Moveable
-                    target={user_icon && document.querySelector('#user_icon')}
-                    draggable={true}
-                    scalable={true}
-                    origin={false}
-                    throttleDrag={0}
-                    keepRatio={true}
-                    onDrag={e => {
-                        e.target.style.transform = e.transform;
-                    }}
-                    onScale={e => {
-                        e.target.style.transform = e.transform;
-                    }}
-                />
-                <p>{width}</p>
-                <p>{targetImg?.style.transform}</p>
-            </React.Fragment>
-        </>
-    )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2061bf291c0df62d34fd10941b35363658cc2271552ad3e876297e656474536f
+size 893

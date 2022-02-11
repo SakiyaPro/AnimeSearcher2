@@ -1,12 +1,3 @@
-import React from 'react'
-import Link from 'next/link'
-
-export const LogoDark = (props) => {
-    return (
-        <>
-            <Link href="/">
-                <a><img src="/image/Logo/AnimeSearcher_logo(Dark).png" alt="AnimeSearcher" width={props.width} height={props.height}/></a>
-            </Link>
-        </>
-    )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1314d54e48b770119afacbbc424474e262b95bad3a3cd925504e5716a1570232
+size 324

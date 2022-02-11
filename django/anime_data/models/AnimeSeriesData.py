@@ -1,16 +1,3 @@
-from django.db.models.fields import IntegerField, TextField
-
-from core_models.models import TimeStampedModel
-
-
-class AnimeSeriesData(TimeStampedModel):
-    """ アニメのシリーズ名を記録 """
-    annictId = IntegerField("AnnictId", unique=True)
-    name = TextField("シリーズ名", null=True, blank=True)
-    nameEn = TextField("シリーズ名EN", null=True, blank=True)
-    nameRo = TextField("シリーズ名RO", null=True, blank=True)
-
-    class Meta:
-        app_label = 'anime_data'
-        verbose_name_plural = "AnimeSeriesData"
-        db_table = "anime_series_db"
+version https://git-lfs.github.com/spec/v1
+oid sha256:98136e98f5e88090b6f91dbec5e4c6c04d2b8dc0d5ab1e7404b889e74123a3f8
+size 635

@@ -1,24 +1,3 @@
-import React, { useState } from 'react'
-import AnimeDetail from './AnimeDetail';
-import AnimeListing from './AnimeListing';
-
-export default function AnimeDetailOrListing({ animeData }) {
-    const [Listing, setListing] = useState(false);
-
-    return (
-        <>
-            {Listing ?
-                <button onClick={() => setListing(false)}>
-                    <img src="/image/systemIcon/list.png" width="40px" />
-                </button> :
-                <button onClick={() => setListing(true)}>
-                    <img src="/image/systemIcon/list.png" width="40px" />
-                </button>
-            }
-            {Listing ?
-                <AnimeListing animeData={animeData} /> :
-                <AnimeDetail animeData={animeData} />
-            }
-        </>
-    )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfcd3364be5986c7ffa507da181ef459f746054253945f1ceb35f292c0bf27ba
+size 787

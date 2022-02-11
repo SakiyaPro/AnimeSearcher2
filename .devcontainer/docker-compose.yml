@@ -1,7 +1,3 @@
-services:
-  client:
-    volumes:
-      - .:/workspace:cached
-  server:
-    volumes:
-      - .:/workspace:cached
+version https://git-lfs.github.com/spec/v1
+oid sha256:49fd9bfc4c3b96214a5983f8b129e9bb76b8e56de429f6d68a3115e2cd53ea5c
+size 112

@@ -1,21 +1,3 @@
-from rest_framework import serializers
-
-from users.models import CustomUser, Profile
-from anime_data.models.AnimeData import AnimeData
-from anime_data.serializer import AnimeDataSerializer
-
-
-class CustomUserSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = CustomUser
-        fields = '__all__'
-
-
-class ProfileSerializer(serializers.ModelSerializer):
-    user = CustomUserSerializer()
-    favorite_anime = AnimeDataSerializer(many=True)
-
-    class Meta:
-        model = Profile
-        fields = '__all__'
+version https://git-lfs.github.com/spec/v1
+oid sha256:f92334fc017a830cc3d535039d762bd063ae3b24cf6c75ac702465fcc0806baf
+size 529

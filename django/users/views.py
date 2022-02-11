@@ -1,23 +1,3 @@
-from users.serializer import CustomUserSerializer, ProfileSerializer
-from users.models import CustomUser, Profile
-from rest_framework import viewsets, filters, permissions
-from rest_framework.views import APIView
-from rest_framework.authtoken.models import Token
-from rest_framework.response import Response
-
-
-class CustomUserViewSet(viewsets.ModelViewSet):
-    queryset = CustomUser.objects.all()
-    serializer_class = CustomUserSerializer
-    permission_classes = (permissions.IsAuthenticated,)
-
-    def get_queryset(self):
-        return CustomUser.objects.filter(id=self.request.user.id)
-
-
-class ProfileViewSet(viewsets.ModelViewSet):
-    queryset = Profile.objects.all()
-    serializer_class = ProfileSerializer
-
-    def get_queryset(self):
-        return Profile.objects.filter(user=self.request.user)
+version https://git-lfs.github.com/spec/v1
+oid sha256:32ad0f4d9ce84822dd68c40ccfcb9b98905ccac7647adbae2b295e498b344a12
+size 809

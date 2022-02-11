@@ -1,7 +1,3 @@
-# coding: utf-8
-from rest_framework import routers
-from users.views import CustomUserViewSet, ProfileViewSet
-
-router = routers.DefaultRouter()
-router.register('user', CustomUserViewSet)
-router.register('profile', ProfileViewSet)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e86e28786d59e49cb19bc5079f32863a036d504bfd1e66d375f7659cc96ef19
+size 229

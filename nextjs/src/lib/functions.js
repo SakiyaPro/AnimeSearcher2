@@ -1,14 +1,3 @@
-// 時期(月)からシーズンを取得する
-export const getSeason = (month) => {
-    let result = ""
-    if (1 <= month <= 3) {
-        result = "WINTER"
-    } else if (4 <= month <= 6) {
-        result = "SPRING"
-    } else if (7 <= month <= 9) {
-        result = "SUMMER"
-    } else {
-        result = "AUTUMN"
-    }
-    return result
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:956ab0d5f00b34cfa0f5dbd54de9c0fba4e257cbadc1e05272c2745834a71ce6
+size 344

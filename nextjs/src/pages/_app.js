@@ -1,34 +1,3 @@
-import '../styles/reset.min.css'
-import '../styles/globals.css'
-
-import Layout from '../components/layout/Layout'
-
-import Head from "next/head";
-import { useRouter } from "next/router";
-import React, { useEffect, useGlobal, setGlobal } from "reactn";
-import axios from 'axios'
-
-export default function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-  const state = {
-    animeData: false
-  }
-  setGlobal(state)
-
-
-  return (
-    <>
-      <Head>
-        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@600&family=Noto+Sans+JP&family=Outfit&display=swap" rel="stylesheet" />
-      </Head>
-      {router.pathname === "/" ?
-        <Component {...pageProps} />
-        :
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      }
-    </>
-  )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fc4087177b861e48381076b174e25c61f4cf5c09f6d7df83636fe3cc0f55318
+size 888

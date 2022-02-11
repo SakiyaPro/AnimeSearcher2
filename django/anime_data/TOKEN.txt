@@ -1,2 +1,3 @@
-# AnnictAPI接続時に使用
-TOKEN ='ddFGRn8UPCE7YMjHfLB08dp4mdMKrt82HLwWJbWBOko'
+version https://git-lfs.github.com/spec/v1
+oid sha256:3506453c69e33843d9aa22a769c2b8e02c42b65920b28ca9c62fc6a5d371e5f8
+size 83
